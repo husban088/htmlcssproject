@@ -1,0 +1,108 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+flex-direction: column;
+gap: 30px;
+background: #fff;
+}
+.inputbox{
+position: relative;
+width: 250px;
+}
+.inputbox input{
+width: 100%;
+padding: 10px;
+border: 1px solid skyblue;
+background: #fff;
+border-radius: 5px;
+outline: none;
+color: black;
+font-size: 1em;
+transition: 0.5s;
+}
+.inputbox span{
+position: absolute;
+left: 0;
+padding: 10px;
+pointer-events: none;
+font-size: 0.85em;
+color: black;
+text-transform: uppercase;
+transform: 0.5s;
+}
+.inputbox input:valid ~ span, .inputbox input:focus ~ span{
+    color: skyblue;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.72em;
+    padding: 0.1px 10px;
+    background: #fff;
+    border-left: 1px solid skyblue;
+    border-right: 1px solid skyblue;
+    letter-spacing: 0.2em;
+}
+.inputbox input:valid, .inputbox input:focus{
+    border: 1px solid #00dfc4;
+}
+.wrapper{
+    width: 500px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+    border-radius: 10px;
+    height: 400px;
+}
+h1{
+    color: orangered;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn{
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 14px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+}
+.btn::before{
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+.btn:hover::before{
+    width: 9em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

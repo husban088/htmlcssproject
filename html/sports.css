@@ -1,0 +1,28 @@
+body{
+    background: #fff;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    width: 980px;
+    margin: 20px auto 20px auto;
+    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+    border-radius: 10px;
+    line-height: 3em;
+    background-color: #fff;
+}
+td{
+    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 30px;
+    background-color: #fff;
+}
+i{
+    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+    border-radius: 10px;
+    padding: 7px;
+}

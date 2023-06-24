@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background: #fff;
+    }
+    .inputbox{
+        position: relative;
+        width: 250px;
+        }
+        .inputbox input{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid skyblue;
+        background: #fff;
+        border-radius: 5px;
+        outline: none;
+        color: black;
+        font-size: 1em;
+        transition: 0.5s;
+        }
+        .inputbox span{
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 0.85em;
+            color: black;
+            text-transform: uppercase;
+            transform: 0.5s;
+            }
+            .inputbox input:valid ~ span, .inputbox input:focus ~ span{
+            color: skyblue;
+            transform: translateX(10px) translateY(-7px);
+            font-size: 0.72em;
+            padding: 0.1px 10px;
+            background: #fff;
+            border-left: 1px solid skyblue;
+            border-right: 1px solid skyblue;
+            letter-spacing: 0.2em;
+            }
+            .inputbox input:valid, .inputbox input:focus{
+            border: 1px solid skyblue;
+            }
+           .wrapper{
+                width: 500px;
+                display: flex;
+                gap: 30px;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: #fff;
+                box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+                border-radius: 10px;
+                height: 400px;
+                margin-top: 20px;
+            } 
+            h1{
+                color: black;
+                font-weight: 900;
+                text-transform: uppercase;
+                font-size: 35px;
+                letter-spacing: 1px;
+                word-spacing: 5px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                border-radius: 10px;
+                box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+                padding: 5px;
+            }
+            .wrapper2{
+                width: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: #fff;
+                box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+                border-radius: 10px;
+                height: 500px;
+                margin-bottom: 20px;
+                gap: 50px;
+            }     
+            select{
+                border: 2px solid #fff;
+                box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+                padding: 5px;
+                border-radius: 10px;
+                text-transform: capitalize;
+                cursor: pointer;
+                font-weight: 750;
+            }   
+            .radio{
+                font-size: 15px;
+                font-weight: 700;
+                text-transform: capitalize;
+                display: inline-block;
+                vertical-align: middle;
+                color: black;
+                position: relative;
+                padding-left: 30px;
+                cursor: pointer;
+            }
+            .radio + .radio{
+                margin-left: 20px;
+            }
+            .radio input[type="radio"]{
+                display: none;
+            }
+            .radio span{
+                height: 18px;
+                width: 18px;
+                border-radius: 50%;
+                border: 3px solid #00aeef;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+            .radio span:after{
+                content: "";
+                height: 8px;
+                width: 8px;
+                background: #00aeef;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%) scale(0);
+                border-radius: 50%;
+                transition: 300ms ease-in-out 0s;
+            }
+            .radio input[type="radio"]:checked ~ span:after{
+                transform: translate(-50%,-50%) scale(1);
+            }
+            i{
+                color: #de6581;
+                font-weight: 900;
+                text-transform: capitalize;
+                margin-right: 10px;
+            }
+            label{
+                color: #de6581;
+                font-weight: 900;
+                text-transform: capitalize;
+            }
+            .wrapper3{
+                width: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: #fff;
+                box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+                border-radius: 10px;
+                height: 550px;
+                margin-bottom: 20px;
+                gap: 50px;
+            }     
+            .btn{
+                width: 9em;
+                height: 3em;
+                border-radius: 30em;
+                font-size: 14px;
+                font-family: inherit;
+                border: none;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                z-index: 1;
+                box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+            }
+            .btn::before{
+                content: '';
+                width: 0;
+                height: 3em;
+                border-radius: 30em;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+                transition: .5s ease;
+                display: block;
+                z-index: -1;
+            }
+            .btn:hover::before{
+                width: 9em;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
